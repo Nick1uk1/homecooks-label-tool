@@ -41,11 +41,21 @@ COLUMN_MAP = {
 def _get_client():
     """Get an authorised gspread client."""
     creds_dict = None
-    for path in SA_PATHS:
-        if os.path.exists(path):
-            with open(path) as f:
-                creds_dict = json.load(f)
-            break
+
+    # Try Streamlit secrets first (for cloud deployment)
+    try:
+        import streamlit as st
+        creds_dict = dict(st.secrets["gcp_service_account"])
+    except Exception:
+        pass
+
+    # Fall back to local service account file
+    if not creds_dict:
+        for path in SA_PATHS:
+            if os.path.exists(path):
+                with open(path) as f:
+                    creds_dict = json.load(f)
+                break
 
     if not creds_dict:
         raise RuntimeError("No service account credentials found.")

@@ -1,0 +1,130 @@
+{
+  "page": {
+    "width_mm": 120,
+    "height_mm": 190,
+    "margin_left_mm": 5,
+    "margin_right_mm": 5,
+    "margin_top_mm": 5,
+    "margin_bottom_mm": 5
+  },
+  "fonts": {
+    "regular": "Helvetica",
+    "bold": "Helvetica-Bold"
+  },
+  "elements": {
+    "product_name": {
+      "x_mm": 5,
+      "y_mm": 180,
+      "width_mm": 110,
+      "font_size": 13,
+      "font_weight": "bold",
+      "align": "center",
+      "max_chars": 42
+    },
+    "chef_name": {
+      "x_mm": 5,
+      "y_mm": 172,
+      "width_mm": 110,
+      "font_size": 8,
+      "font_weight": "bold",
+      "align": "center",
+      "max_chars": 66
+    },
+    "chef_story": {
+      "x_mm": 5,
+      "y_mm": 167,
+      "width_mm": 110,
+      "font_size": 6.5,
+      "font_weight": "regular",
+      "align": "center",
+      "max_lines": 3,
+      "max_chars": 255
+    },
+    "servings": {
+      "x_mm": 5,
+      "y_mm": 152,
+      "width_mm": 50,
+      "font_size": 7,
+      "font_weight": "bold",
+      "align": "left"
+    },
+    "cooking_instructions": {
+      "x_mm": 5,
+      "y_mm": 147,
+      "width_mm": 110,
+      "font_size": 6,
+      "font_weight": "regular",
+      "align": "left",
+      "line_spacing": 1.2,
+      "max_chars_per_method": 170
+    },
+    "ingredients": {
+      "x_mm": 5,
+      "y_mm": 108,
+      "width_mm": 52,
+      "font_size": 5.5,
+      "font_weight": "regular",
+      "align": "left",
+      "line_spacing": 1.15,
+      "heading_font_size": 6.5,
+      "max_chars": 920
+    },
+    "nutrition_table": {
+      "x_mm": 60,
+      "y_mm": 108,
+      "width_mm": 55,
+      "font_size": 5.5,
+      "font_weight": "regular",
+      "header_font_size": 6,
+      "row_height_mm": 3.2,
+      "col_widths_mm": [24, 15, 16]
+    },
+    "allergens": {
+      "x_mm": 5,
+      "y_mm": 30,
+      "width_mm": 52,
+      "font_size": 5.5,
+      "font_weight": "regular",
+      "align": "left"
+    },
+    "barcode": {
+      "x_mm": 65,
+      "y_mm": 10,
+      "width_mm": 40,
+      "height_mm": 18
+    },
+    "batch_code": {
+      "x_mm": 5,
+      "y_mm": 20,
+      "width_mm": 55,
+      "font_size": 6.5,
+      "font_weight": "regular",
+      "align": "left"
+    },
+    "use_by_date": {
+      "x_mm": 5,
+      "y_mm": 16,
+      "width_mm": 55,
+      "font_size": 6.5,
+      "font_weight": "bold",
+      "align": "left"
+    },
+    "pack_weight": {
+      "x_mm": 5,
+      "y_mm": 12,
+      "width_mm": 55,
+      "font_size": 6.5,
+      "font_weight": "regular",
+      "align": "left"
+    },
+    "storage_instructions": {
+      "x_mm": 5,
+      "y_mm": 7,
+      "width_mm": 110,
+      "font_size": 5.5,
+      "font_weight": "regular",
+      "align": "left",
+      "max_chars": 198
+    }
+  }
+}

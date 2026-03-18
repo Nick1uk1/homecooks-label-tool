@@ -1,0 +1,173 @@
+/* HomeCooks D2C Label Tool - Light Clean Theme */
+/* Distinct from the dark dashboard — clean, modern, print-tool feel */
+
+/* Global styles */
+.main {
+    background-color: #f7f9f9;
+    color: #1a2e2f;
+}
+
+/* Hide Streamlit branding and sidebar */
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+[data-testid="stSidebar"] {display: none;}
+[data-testid="collapsedControl"] {display: none;}
+header[data-testid="stHeader"] {background: transparent;}
+
+/* Main header */
+.main-header {
+    background: #ffffff;
+    padding: 1.5rem 2rem;
+    border-radius: 16px;
+    margin-bottom: 1.5rem;
+    border: 1px solid #e0e8e8;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.main-header img {
+    width: 56px;
+    height: 56px;
+    border-radius: 12px;
+}
+
+.main-header h1 {
+    color: #043d42;
+    margin: 0;
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.main-header .subtitle {
+    color: #5a7a7d;
+    margin: 0.15rem 0 0 0;
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+/* Buttons */
+.stButton > button {
+    background: #043d42;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    padding: 0.5rem 1.25rem;
+    font-weight: 600;
+    font-size: 0.85rem;
+    transition: all 0.15s ease;
+}
+
+.stButton > button:hover {
+    background: #065a61;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(4, 61, 66, 0.2);
+}
+
+/* Primary button (generate) */
+.stButton > button[kind="primary"] {
+    background: #80c8c2;
+    color: #043d42;
+    font-size: 0.95rem;
+    padding: 0.7rem 2rem;
+    border-radius: 10px;
+    font-weight: 700;
+}
+
+.stButton > button[kind="primary"]:hover {
+    background: #6ab8b2;
+    box-shadow: 0 4px 16px rgba(128, 200, 194, 0.4);
+}
+
+/* Input fields */
+.stTextInput > div > div > input {
+    background-color: #ffffff;
+    color: #1a2e2f;
+    border: 1.5px solid #d0dede;
+    border-radius: 10px;
+    padding: 0.6rem 0.8rem;
+}
+
+.stTextInput > div > div > input:focus {
+    border-color: #80c8c2;
+    box-shadow: 0 0 0 2px rgba(128, 200, 194, 0.25);
+}
+
+.stTextInput label, .stMultiSelect label {
+    color: #2d4a4c;
+    font-weight: 500;
+    font-size: 0.85rem;
+}
+
+/* Multiselect */
+.stMultiSelect > div > div > div {
+    background-color: #ffffff;
+    border: 1.5px solid #d0dede;
+    border-radius: 10px;
+}
+
+.stMultiSelect [data-baseweb="tag"] {
+    background-color: #e8f5f3;
+    color: #043d42;
+    border-radius: 6px;
+    border: 1px solid #c0e0dc;
+}
+
+/* Download button */
+.stDownloadButton > button {
+    background: #ffffff;
+    color: #043d42;
+    border: 2px solid #80c8c2;
+    border-radius: 10px;
+    font-weight: 700;
+    padding: 0.7rem 2rem;
+    font-size: 0.95rem;
+    transition: all 0.15s ease;
+}
+
+.stDownloadButton > button:hover {
+    background: #e8f5f3;
+    border-color: #6ab8b2;
+    transform: translateY(-1px);
+}
+
+/* Success/Error/Warning/Info messages */
+div[data-testid="stAlert"] {
+    border-radius: 10px;
+}
+
+/* Divider */
+hr {
+    border-color: #e0e8e8;
+    margin: 1.5rem 0;
+}
+
+/* Product count badge */
+.product-count {
+    background: #e8f5f3;
+    border: 1px solid #c0e0dc;
+    border-radius: 20px;
+    padding: 0.35rem 1rem;
+    color: #043d42;
+    font-size: 0.8rem;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+
+/* Section headers */
+h2, h3 {
+    color: #043d42;
+    font-weight: 600;
+}
+
+/* Caption text */
+.stCaption, caption {
+    color: #7a9a9d;
+}
+
+/* Spinner */
+.stSpinner > div {
+    border-top-color: #80c8c2;
+}

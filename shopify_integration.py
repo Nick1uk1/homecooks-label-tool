@@ -4,9 +4,13 @@ import os
 import re
 import requests
 
-
-SHOPIFY_DOMAIN = os.environ.get("SHOPIFY_SHOP_DOMAIN", "homecooks-3984.myshopify.com")
-SHOPIFY_TOKEN = os.environ.get("SHOPIFY_ACCESS_TOKEN", "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")
+try:
+    import streamlit as st
+    SHOPIFY_DOMAIN = st.secrets.get("SHOPIFY_SHOP_DOMAIN", os.environ.get("SHOPIFY_SHOP_DOMAIN", ""))
+    SHOPIFY_TOKEN = st.secrets.get("SHOPIFY_ACCESS_TOKEN", os.environ.get("SHOPIFY_ACCESS_TOKEN", ""))
+except Exception:
+    SHOPIFY_DOMAIN = os.environ.get("SHOPIFY_SHOP_DOMAIN", "")
+    SHOPIFY_TOKEN = os.environ.get("SHOPIFY_ACCESS_TOKEN", "")
 API_VERSION = "2024-01"
 
 # Non-food products to exclude from label generation

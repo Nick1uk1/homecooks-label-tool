@@ -1,5 +1,6 @@
 """Read product data from the D2C label tool Google Sheet."""
 
+import base64
 import json
 import os
 
@@ -45,7 +46,12 @@ def _get_client():
     # Try Streamlit secrets first (for cloud deployment)
     try:
         import streamlit as st
-        creds_dict = dict(st.secrets["gcp_service_account"])
+        # Preferred: base64-encoded JSON string (avoids TOML multiline issues)
+        sa_b64 = st.secrets.get("GCP_SERVICE_ACCOUNT_B64")
+        if sa_b64:
+            creds_dict = json.loads(base64.b64decode(sa_b64))
+        else:
+            creds_dict = dict(st.secrets["gcp_service_account"])
     except Exception:
         pass
 

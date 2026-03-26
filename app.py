@@ -67,6 +67,7 @@ if "products" not in st.session_state:
     except Exception as e:
         st.session_state["products"] = []
         st.error(f"Failed to load products: {e}")
+        st.exception(e)
 
 products = st.session_state.get("products", [])
 
